@@ -9,6 +9,7 @@ interface Props {
   tabs: ReadonlyArray<{
     id: number;
     active?: boolean;
+    ssr?: boolean;
     className?: string;
     title: any;
     content: any;
@@ -32,8 +33,6 @@ const TabContainer = ({
     setData(data.map((t) => ({ ...t, active: t.id === id })));
   };
 
-  const active: any = first(data.filter((t) => t.active));
-
   const activeNavClassName = tabsActiveNavClassName || styles.tabs__activeNav;
 
   return (
@@ -52,11 +51,17 @@ const TabContainer = ({
           </TabNav>
         ))}
       </div>
-      <TabContent
-        className={classNames(styles.tabs__content, tabsContentClassName)}
-      >
-        {active.content}
-      </TabContent>
+
+      {data.map((tab) => (
+        <TabContent
+          key={tab.id}
+          ssr={tab.ssr}
+          active={tab.active}
+          className={classNames(styles.tabs__content, tabsContentClassName)}
+        >
+          {tab.content}
+        </TabContent>
+      ))}
     </div>
   );
 };

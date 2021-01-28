@@ -9,3 +9,11 @@
 .tabs__activeNav {
   text-decoration: underline;
 }
+
+.tabs__ssrHide {
+  display: none;
+}
+
+.tabs__ssrShow {
+  display: block;
+}

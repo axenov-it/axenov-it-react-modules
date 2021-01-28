@@ -13,6 +13,7 @@ function App() {
           {
             id: 1,
             active: true,
+            ssr: true,
             className: styles.tab__nav,
             title: "header title 1",
             content: mock.tabs.content1,
@@ -20,6 +21,7 @@ function App() {
           {
             id: 2,
             active: false,
+            ssr: false,
             className: styles.tab__nav,
             title: "header title 2",
             content: mock.tabs.content2,
