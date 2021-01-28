@@ -1,0 +1,21 @@
+.app__content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.tab__nav {
+  background: #ddd;
+  margin-right: 15px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+}
+
+.tab__active {
+  background: #000;
+  color: #fff;
+}
+
+.tab__header {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,11 @@
+.tabs__header {
+  display: flex;
+}
+
+.tabs__nav {
+  cursor: pointer;
+}
+
+.tabs__activeNav {
+  text-decoration: underline;
+}
