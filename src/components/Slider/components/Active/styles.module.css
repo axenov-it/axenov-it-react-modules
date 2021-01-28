@@ -1,0 +1,17 @@
+.active,
+.active__img {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.active {
+  opacity: 0;
+}
+
+.visable {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
